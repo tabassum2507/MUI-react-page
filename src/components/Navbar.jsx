@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -7,7 +7,9 @@ import {
   InputBase,
   Box,
   Badge,
-  Avatar
+  Avatar,
+  Menu,
+  MenuItem
   // MailIcon,
   // Notifications
 } from "@mui/material";
@@ -44,6 +46,8 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <AppBar position="stick">
       <StyledToolbar>
@@ -65,8 +69,9 @@ const Navbar = () => {
           <Avatar
             src="https://images.unsplash.com/photo-1621346945190-51bcf3d4b96d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             sx={{ width: 30, height: 30 }}
+            onClick={(e) => setOpen(true)}
           />
-          <UserBox>
+          <UserBox onClick={(e) => setOpen(true)}>
             <Avatar
               src="https://images.unsplash.com/photo-1621346945190-51bcf3d4b96d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
               sx={{ width: 30, height: 30 }}
