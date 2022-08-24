@@ -26,15 +26,21 @@ const Search = styled("div")(({ theme }) => ({
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
-  display: "flex",
-  align: "center",
-  gap: "20px"
+  display: "none",
+  alignItems: "center",
+  gap: "20px",
+  [theme.breakpoints.up("sm")]: {
+    display: "flex"
+  }
 }));
 
 const UserBox = styled(Box)(({ theme }) => ({
   display: "flex",
-  align: "center",
-  gap: "20px"
+  alignItems: "center",
+  gap: "10px",
+  [theme.breakpoints.up("sm")]: {
+    display: "none"
+  }
 }));
 
 const Navbar = () => {
@@ -60,7 +66,7 @@ const Navbar = () => {
             src="https://images.unsplash.com/photo-1621346945190-51bcf3d4b96d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
             sx={{ width: 30, height: 30 }}
           />
-          <UserBox variant="span">
+          <UserBox>
             <Avatar
               src="https://images.unsplash.com/photo-1621346945190-51bcf3d4b96d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
               sx={{ width: 30, height: 30 }}
@@ -69,6 +75,24 @@ const Navbar = () => {
           </UserBox>
         </Icons>
       </StyledToolbar>
+      <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+        open={open}
+        onClose={(e) => setOpen(false)}
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "right"
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "right"
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   );
 };
