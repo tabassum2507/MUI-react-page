@@ -10,9 +10,9 @@ import {
   Avatar,
   Menu,
   MenuItem
-  // MailIcon,
-  // Notifications
 } from "@mui/material";
+import MailIcon from "@mui/icons-material/Mail";
+import NotificationsIcon from "@mui/icons-material/Notifications";
 import EmojiNatureIcon from "@mui/icons-material/EmojiNature";
 
 const StyledToolbar = styled(Toolbar)({
@@ -61,10 +61,10 @@ const Navbar = () => {
         </Search>
         <Icons>
           <Badge badgeContent={4} color="error">
-            {/* <MailIcon /> */}
+            <MailIcon />
           </Badge>
           <Badge badgeContent={2} color="error">
-            {/* <Notifications />  */}
+            <NotificationsIcon />
           </Badge>
           <Avatar
             src="https://images.unsplash.com/photo-1621346945190-51bcf3d4b96d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
