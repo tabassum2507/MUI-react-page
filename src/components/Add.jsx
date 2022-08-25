@@ -60,7 +60,7 @@ const Add = () => {
         <Box
           width={400}
           height={280}
-          bgcolor={"background.default"}
+          bgcolor="white"
           color={"text.primary"}
           p={3}
           borderRadius={5}

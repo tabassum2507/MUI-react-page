@@ -16,7 +16,7 @@ function App() {
   // });
 
   return (
-    <div>
+    <>
       <Box>
         <Navbar />
         <Stack direction="row" spacing={2} justifyContent="space-between">
@@ -26,7 +26,7 @@ function App() {
         </Stack>
         <Add />
       </Box>
-    </div>
+    </>
   );
 }
 
